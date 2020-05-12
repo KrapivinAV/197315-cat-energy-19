@@ -1,0 +1,75 @@
+@mixin flex ($direction: no, $justify: no, $align-items: no, $wrap: no) {
+  display: flex;
+
+  @if $direction != no {
+    flex-direction: $direction;
+  }
+
+  @if $justify != no {
+    justify-content: $justify;
+  }
+
+  @if $align-items != no {
+    align-items: $align-items;
+  }
+
+  @if $wrap != no {
+    flex-wrap: $wrap;
+  }
+}
+
+@mixin font-parameters ($size: no, $line-height: no, $color: no, $align: no, $transform: no) {
+  @if $size != no {
+    font-size: $size;
+  }
+
+  @if $line-height != no {
+    line-height: $line-height;
+  }
+
+  @if $color != no {
+    color: $color;
+  }
+
+  @if $align != no {
+    text-align: $align;
+  }
+
+  @if $transform != no {
+    text-transform: $transform;
+  }
+}
+
+@mixin pseudo-element ($top: no, $right: no, $bottom: no, $left: no, $width: 1px, $height: 1px) {
+  content: "";
+  position: absolute;
+
+  @if $top != no {
+    top: $top;
+  }
+
+  @if $right != no {
+    right: $right;
+  }
+
+  @if $bottom != no {
+    bottom: $bottom;
+  }
+
+  @if $left != no {
+    left: $left;
+  }
+
+  width: $width;
+  height: $height;
+}
+
+@mixin button ($width: 100%, $background-color: $leaf) {
+  box-sizing: border-box;
+  width: $width;
+  min-height: 40px;
+  padding: 10px;
+  vertical-align: middle;
+  background-color: $background-color;
+  border: none;
+}

@@ -1,0 +1,164 @@
+.categories {
+  @include flex (column);
+}
+
+.categories__item {
+  @include flex (column);
+  position: relative;
+  margin-top: 20px;
+  padding: 20px;
+  background-color: $white-three;
+
+  &::before {
+    @include pseudo-element (24px, no, no, 22px, 50px, 50px);
+    background-color: $leaf;
+    border: none;
+    border-radius: 50%;
+  }
+}
+
+.categories__item--slim {
+  &::after {
+    @include pseudo-element (22px, no, no, 30px, 35px, 49px);
+    background-image: url("../../img/icon-cat-slim.svg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
+
+.categories__item--fat {
+  &::after {
+    @include pseudo-element (35px, no, no, 13px, 67px, 28px);
+    background-image: url("../../img/icon-cat-pro.svg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
+
+.categories__item-title {
+  @include font-parameters (24px, 37px, $black-two, no, uppercase);
+  margin: 10px 0 30px 72px;
+}
+
+.categories__item-text {
+  @include font-parameters (14px, 18px, $greyish-brown);
+  font-family: "Arial", "Helvetica", sans-serif;
+  padding-bottom: 20px;
+  border-bottom: 1px solid $pinkish-grey-four;
+}
+
+.categories__item-link {
+  @include font-parameters (16px, 16px, $black-two, no, uppercase);
+  margin-top: 20px;
+}
+
+.categories__item-image {
+  margin-left: 10px;
+  color: $arrow-color;
+}
+
+/*
+
+
+--------------------------- TABLET-----------------------------------
+
+
+*/
+
+@media (min-width: $tablet-width) {
+  .categories__item {
+    margin-top: 0;
+    margin-bottom: 28px;
+    padding: 77px 0 62px 52px;
+
+    &::before {
+      @include pseudo-element (92px, 62px, no, auto, 200px, 200px);
+    }
+  }
+
+  .categories__item--slim {
+    padding-right: 280px;
+
+    &::after {
+      @include pseudo-element (80px, 92px, no, auto, 141px, 194px);
+    }
+  }
+
+  .categories__item--fat {
+    padding-right: 315px;
+
+    &::after {
+      @include pseudo-element (135px, 28px, no, auto, 268px, 113px);
+    }
+  }
+
+  .categories__item-title {
+    @include font-parameters (36px);
+    margin: 0 0 25px;
+  }
+
+  .categories__item-text {
+    @include font-parameters (16px, 24px);
+    padding: 0;
+    border: none;
+  }
+
+  .categories__item-link {
+    @include font-parameters (20px, 20px);
+    margin-top: 57px;
+  }
+
+  .categories__item-image {
+    margin-left: 20px;
+  }
+}
+
+/*
+
+
+--------------------------- DESKTOP-----------------------------------
+
+
+*/
+
+@media (min-width: $desktop-width) {
+  .categories {
+    @include flex (row, space-between, no, wrap);
+    margin: 80px -40px;
+  }
+
+  .categories__item {
+    flex-grow: 1;
+    width: 570px;
+    box-sizing: border-box;
+    margin: 0 40px 0;
+    padding: 75px 55px 62px 52px;
+
+    &::before {
+      @include pseudo-element (47px, auto, no, 52px, 100px, 100px);
+    }
+  }
+
+  .categories__item--slim {
+    &::after {
+      @include pseudo-element (41px, auto, no, 65px, 71px, 97px);
+    }
+  }
+
+  .categories__item--fat {
+    &::after {
+      @include pseudo-element (68px, auto, no, 34px, 134px, 57px);
+    }
+  }
+
+  .categories__item-title {
+    @include font-parameters (36px);
+    margin: 0 0 75px 161px;
+  }
+
+  .categories__item-link {
+    margin-top: 31px;
+  }
+}

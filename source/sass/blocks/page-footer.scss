@@ -1,0 +1,144 @@
+.page-footer {
+  @include flex (column);
+  margin: 0 -20px 0;
+  padding: 8px 20px 0;
+  background-color: $white-three;
+}
+
+.page-footer > * {
+  @include flex (no, center, center);
+  border-bottom: 1px solid $pinkish-grey-four;
+}
+
+.page-footer__logo-wrapper {
+  min-height: 94px;
+}
+
+.page-footer__logo-image {
+  color: $black-two;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.page-footer__social {
+  flex-wrap: wrap;
+  min-height: 62px;
+}
+
+.page-footer__social-link {
+  margin: 0 20px;
+}
+
+.page-footer__social-image,
+.page-footer__developer-image {
+  color: $brownish-grey;
+
+  &:hover {
+    color: $leaf;
+  }
+
+  &:active {
+    color: $leaf;
+    opacity: 0.3;
+  }
+}
+
+.page-footer__developer {
+  justify-content: space-between;
+  min-height: 78px;
+}
+
+.page-footer__developer-link {
+  @include font-parameters (16px, 16px, $greyish-brown);
+  font-family: "Arial", "Helvetica", sans-serif;
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+/*
+
+
+--------------------------- TABLET-----------------------------------
+
+
+*/
+
+@media (min-width: $tablet-width) {
+  .page-footer {
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 -30px;
+    padding: 0 30px;
+    min-height: 150px;
+  }
+
+  .page-footer > * {
+    border-bottom: none;
+  }
+
+  .page-footer__logo-wrapper {
+    min-height: 0;
+    margin-right: 40px;
+  }
+
+  .page-footer__social {
+    flex-wrap: wrap;
+    min-height: 0;
+  }
+
+  .page-footer__social-link {
+    margin: 0 15px;
+
+    &:nth-of-type(1) {
+      .page-footer__social-image {
+        width: 30px;
+        height: 16px;
+      }
+    }
+
+    &:nth-of-type(2) {
+      .page-footer__social-image {
+        width: 23px;
+        height: 23px;
+      }
+    }
+
+    &:nth-of-type(3) {
+      .page-footer__social-image {
+        width: 14px;
+        height: 28px;
+      }
+    }
+  }
+
+  .page-footer__developer {
+    min-height: 0;
+
+    a {
+      margin-left: 23px;
+    }
+  }
+}
+
+/*
+
+
+--------------------------- DESKTOP-----------------------------------
+
+
+*/
+
+@media (min-width: $desktop-width) {
+  .page-footer {
+    margin: 0 -110px;
+    padding: 0 110px;
+  }
+}
