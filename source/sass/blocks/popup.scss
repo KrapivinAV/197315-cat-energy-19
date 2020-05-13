@@ -1,0 +1,44 @@
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  display: none;
+  width: 50%;
+  height: 200px;
+  background-color: $leaf;
+  box-shadow: 0 0 30px 0 #000000;
+  transform: translate(-50%, -50%);
+}
+
+.popup--active {
+  display: block;
+}
+
+.popup__close {
+  position: absolute;
+  top: 22px;
+  right: 22px;
+  width: 55px;
+  height: 55px;
+  border: none;
+  border-radius: 50%;
+  background-image: url("../img/modal-close.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  font-size: 0;
+  opacity: 0.7;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.9;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.popup__title {
+  @include font-parameters (20px, 20px, $black-two, center, uppercase);
+  margin-top: 100px;
+}

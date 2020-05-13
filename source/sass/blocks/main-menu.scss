@@ -1,0 +1,167 @@
+.main-menu {
+  @include flex (column);
+  position: relative;
+}
+
+.main-menu__toggle {
+  position: absolute;
+  top: -42px;
+  right: 19px;
+  z-index: 2;
+  display: block;
+  width: 25px;
+  height: 19px;
+  background-color: $white-two;
+  font-size: 0;
+  cursor: pointer;
+  border: none;
+
+  &:hover,
+  &:active {
+    background-color: $light-pink-two;
+  }
+}
+
+.main-menu--closed .main-menu__toggle {
+  background-image: url("../../img/icon-mobile-menu.svg");
+  background-size: 25px 19px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.main-menu--opened .main-menu__toggle {
+  background-image: url("../../img/icon-close.svg");
+  background-size: 19px 19px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/*
+.main-menu--closed + .main-menu__toggle {
+  .main-menu__toggle-opened {
+    display: none;
+  }
+}
+
+.main-menu--opened + .main-menu__toggle {
+  .main-menu__toggle-closed {
+    display: none;
+  }
+}
+*/
+
+.main-menu__list {
+  @include flex (column);
+}
+
+.main-menu__item {
+  @include flex (no, center, center);
+  min-height: 65px;
+  border-top: 1px solid $light-pink;
+  box-sizing: border-box;
+}
+
+.main-menu__link {
+  @include font-parameters (20px, 20px, $black-two, no, uppercase);
+}
+
+.main-menu__link[href] {
+  &:hover {
+    color: $black-two-transparent-60;
+  }
+
+  &:active {
+    color: $black-two-transparent-30;
+  }
+}
+
+@media (max-width: $mobile-width-only) {
+  .main-menu--closed .main-menu__list {
+    display: none;
+  }
+
+  .main-menu--nojs .main-menu__toggle {
+    display: none;
+  }
+
+  .main-menu--nojs .main-menu__list {
+    display: flex;
+  }
+}
+
+/*
+
+
+--------------------------- TABLET-----------------------------------
+
+
+*/
+
+@media (min-width: $tablet-width) {
+  .main-menu {
+    flex-direction: row;
+  }
+
+  .main-menu__toggle {
+    display: none;
+  }
+
+  .main-menu__list {
+    @include flex (row, flex-end, flex-start, wrap);
+    padding: 17px 0 0;
+  }
+
+  .main-menu__item {
+    min-height: auto;
+    margin: 0 0 0 37px;
+    padding: 0 0 7px 0;
+    border: none;
+
+    &--active {
+      border-bottom: 2px solid $leaf;
+    }
+  }
+
+  .main-menu__link {
+    @include font-parameters (18px, 25px);
+  }
+}
+
+/*
+
+
+--------------------------- DESKTOP-----------------------------------
+
+
+*/
+
+@media (min-width: $desktop-width) {
+  .main-menu__list {
+    @include flex (row, flex-end, flex-start, wrap);
+    padding: 17px 0 0;
+  }
+
+  .main-menu__list--recolor .main-menu__item {
+    &--active {
+      border-bottom: 2px solid $white-two;
+    }
+  }
+
+  .main-menu__link {
+    @include font-parameters (20px, 25px);
+  }
+
+  .main-menu__list--recolor .main-menu__link {
+    color: $white-two;
+  }
+
+  .main-menu__list--recolor .main-menu__link[href] {
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+}
