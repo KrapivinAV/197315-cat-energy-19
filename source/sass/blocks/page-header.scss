@@ -62,6 +62,8 @@
 @media (min-width: $desktop-width) {
   .page-header {
     margin: 55px 0 0;
+    width: 1220px;
+    align-self: center;
   }
 
   .page-header__logo-image {

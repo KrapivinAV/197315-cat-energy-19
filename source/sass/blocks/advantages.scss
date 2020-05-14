@@ -28,33 +28,25 @@
   background-size: 75%;
 }
 
-.advantages__item--substance {
-  .advantages__item-icon {
-    background-image: url("../../img/advantage-leaf@1x.png");
-  }
+.advantages__item--substance .advantages__item-icon {
+  background-image: url("../../img/advantage-leaf@1x.png");
 }
 
-.advantages__item--speed {
-  .advantages__item-icon {
-    background-image: url("../../img/advantage-powder@1x.png");
-  }
+.advantages__item--speed .advantages__item-icon {
+  background-image: url("../../img/advantage-powder@1x.png");
 }
 
-.advantages__item--replacement {
-  .advantages__item-icon {
-    background-image: url("../../img/advantage-dining@1x.png");
-  }
+.advantages__item--replacement .advantages__item-icon {
+  background-image: url("../../img/advantage-dining@1x.png");
 }
 
-.advantages__item--changes {
-  .advantages__item-icon {
-    background-image: url("../../img/advantage-clock@1x.png");
-  }
+.advantages__item--changes .advantages__item-icon {
+  background-image: url("../../img/advantage-clock@1x.png");
 }
 
 .advantages__text {
   @include font-parameters (14px, 18px, $greyish-brown);
-  font-family: "Arial", "Helvetica", sans-serif;
+  font-family: "Arial", sans-serif;
   margin-left: 20px;
 }
 
@@ -92,7 +84,7 @@
 
     &::after {
       @include pseudo-element (-40px, 0, no, no, 150px, 281px);
-      @include font-parameters (281px, 281px, red, right);
+      @include font-parameters (281px, 281px, $white-three, right);
     }
 
     &:nth-of-type(1)::after {
@@ -137,6 +129,8 @@
 @media (min-width: $desktop-width) {
   .advantages {
     margin-top: 0;
+    width: 1220px;
+    align-self: center;
   }
 
   .advantages__title {
@@ -145,15 +139,18 @@
 
   .advantages__list {
     @include flex (row, flex-start, no, wrap);
-    margin: 0 -40px;
+    margin: 0;
   }
 
   .advantages__item {
-    flex-grow: 1;
     width: 245px;
 
     &:nth-of-type(n) {
-      margin: 0 40px;
+      margin: 0 80px 0 0;
+    }
+
+    &:nth-of-type(4n) {
+      margin: 0;
     }
   }
 }

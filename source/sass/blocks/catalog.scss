@@ -44,24 +44,24 @@
   flex-shrink: 0;
 }
 
-.catalog__item-description-paragraph {
+.catalog__item-paragraph {
   @include flex (row, space-between);
   @include font-parameters (12px, 16px, $greyish-brown);
+}
 
-  span {
-    flex-grow: 1;
-    width: 60px;
-    font-family: "Arial", "Helvetica", sans-serif;
+.catalog__item-paragraph span {
+  flex-grow: 1;
+  width: 60px;
+  font-family: "Arial", sans-serif;
 
-    &:first-of-type {
-      margin-right: 10px;
-      text-align: left;
-    }
+  &:first-of-type {
+    margin-right: 10px;
+    text-align: left;
+  }
 
-    &:last-of-type {
-      margin-left: 10px;
-      text-align: right;
-    }
+  &:last-of-type {
+    margin-left: 10px;
+    text-align: right;
   }
 }
 
@@ -70,15 +70,15 @@
   @include font-parameters (16px, 20px, $white-two, center, uppercase);
 }
 
-.catalog-item--extend {
+.catalog__item--extend {
   align-items: center;
   text-align: center;
+}
 
-  .catalog__item-text {
-    @include font-parameters (12px, 16px, $greyish-brown);
-    font-family: "Arial", "Helvetica", sans-serif;
-    margin-bottom: 20px;
-  }
+.catalog__item--extend .catalog__item-text {
+  @include font-parameters (12px, 16px, $greyish-brown);
+  font-family: "Arial", sans-serif;
+  margin-bottom: 20px;
 }
 
 .catalog__item-extend {
@@ -159,31 +159,30 @@
     margin: 0 0 20px;
   }
 
-  .catalog__item-description-paragraph {
+  .catalog__item-paragraph {
     @include flex (no, no, center);
     @include font-parameters (16px);
     min-height: 30px;
     border-bottom: 1px solid $light-pink;
-
-    span {
-      width: 110px;
-    }
   }
 
-  .catalog-item--extend {
+  .catalog__item-paragraph span {
+    width: 110px;
+  }
+
+  .catalog__item--extend {
     min-width: 324px;
     min-height: 391px;
     margin-top: 82px;
     background-image: none;
     border: 1px solid $light-pink;
     box-sizing: border-box;
+  }
 
-
-    .catalog__item-text {
-      @include font-parameters (16px);
-      width: 170px;
-      margin-bottom: 85px;
-    }
+  .catalog__item--extend .catalog__item-text {
+    @include font-parameters (16px);
+    width: 170px;
+    margin-bottom: 85px;
   }
 
   .catalog__item-extend {
@@ -214,7 +213,9 @@
 @media (min-width: $desktop-width) {
   .catalog {
     @include flex (row, no, no, wrap);
-    margin: 0 -40px;
+    align-self: center;
+    width: 1300px;
+    margin: 0;
   }
 
   .catalog__title {
@@ -230,13 +231,13 @@
     }
   }
 
-  .catalog__item-description-paragraph {
+  .catalog__item-paragraph {
     span {
       width: 72px;
     }
   }
 
-  .catalog .catalog-item--extend {
+  .catalog .catalog__item--extend {
     min-width: 245px;
     margin-top: 82px;
   }

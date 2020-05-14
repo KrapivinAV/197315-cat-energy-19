@@ -1,0 +1,49 @@
+/*Общая часть*/
+
+body {
+  margin: 0;
+  padding: 0 20px;
+  min-width: 280px;
+  background-color: #ffffff;
+}
+
+body * {
+  margin: 0;
+  padding: 0;
+  font-family: "Oswald", "Arial", sans-serif;
+  font-weight: 400;
+}
+
+[class*="list"] {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+@media (min-width: $tablet-width) {
+  body {
+    padding: 0 30px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  body {
+    @include flex (column);
+    padding: 0 70px;
+  }
+}

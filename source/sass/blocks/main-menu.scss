@@ -36,20 +36,6 @@
   background-repeat: no-repeat;
 }
 
-/*
-.main-menu--closed + .main-menu__toggle {
-  .main-menu__toggle-opened {
-    display: none;
-  }
-}
-
-.main-menu--opened + .main-menu__toggle {
-  .main-menu__toggle-closed {
-    display: none;
-  }
-}
-*/
-
 .main-menu__list {
   @include flex (column);
 }

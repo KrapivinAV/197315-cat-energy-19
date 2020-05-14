@@ -79,29 +79,31 @@
 @media (min-width: $desktop-width) {
   .promo {
     min-height: 474px;
-    margin: -120px -110px 0;
-    padding: 222px 190px 0;
+    width: 1220px;
+    margin: -120px -70px 0;
+    padding: 222px calc((100vw - 1220px) / 2) 0;
     background-image:
       url("../../img/index-can-desktop@1x.png"),
       url("../../img/index-background-desktop@1x.jpg"),
       linear-gradient(to left, $leaf-three 50%, transparent 50%);
-    background-position: 63% 72%, 100% 0, 0 0;
+    background-position: calc(50% + 116px) 72%, 100% 0, 0 0;
     background-size: 552px, 720px, 100%;
   }
 
   .promo__title {
     @include font-parameters (60px, 60px, $black-two, left);
-    margin-bottom: 42px;
+    margin: 0 0 42px 81px;
   }
 
   .promo__slogan {
     @include font-parameters (20px, 20px, $black-two, left);
-    margin-bottom: 52px;
+    margin: 0 0 52px 81px;
   }
 
   .promo__programm-link {
     @include font-parameters (20px, 20px);
     align-self: flex-start;
     width: 245px;
+    margin-left: 81px;
   }
 }
