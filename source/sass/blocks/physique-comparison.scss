@@ -1,3 +1,249 @@
 .physique-comparison {
-  display: none;
+  @include flex (column);
+  margin: 20px -20px 0;
+  padding: 16px 20px 35px;
+  background-color: $white-three;
+}
+
+.physique-comparison__wrapper {
+  @include flex (column);
+}
+
+.physique-comparison__title {
+  @include font-parameters (36px, 60px, $black-two);
+  margin-bottom: 24px;
+}
+
+.physique-comparison__text {
+  @include font-parameters (14px, 18px, $greyish-brown);
+  font-family: "Arial", sans-serif;
+  margin-bottom: 25px;
+}
+
+.physique-comparison__slider {
+  @include flex (column, no, center);
+  margin: 34px -20px 0;
+}
+
+.physique-comparison__toggle {
+  @include flex (row, space-between);
+  position: relative;
+  width: 200px;
+  margin-top: 27px;
+
+  &::before {
+    @include pseudo-element (2px, no, no, 58px, 84px, 14px);
+    box-sizing: border-box;
+    border: 1px solid $light-pink;
+    border-radius: 6px;
+    background-color: $white-two;
+  }
+
+  &::after {
+    @include pseudo-element (6px, no, no, no, 35px, 6px);
+    border-radius: 3px;
+    background-color: $leaf;
+  }
+}
+
+.physique-comparison__toggle--before {
+  &::after {
+    left: 64px;
+  }
+}
+
+.physique-comparison__toggle--after {
+  &::after {
+    left: 101px;
+  }
+}
+
+.physique-comparison__toggle-item {
+  @include font-parameters (16px, 20px, $black-two, no, uppercase);
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+
+/*
+
+
+--------------------------- TABLET-----------------------------------
+
+
+*/
+
+@media (min-width: $tablet-width) {
+  .physique-comparison {
+    margin: -30px -30px 0;
+    padding: 42px 30px 70px;
+    background-color: $white-two;
+    background-image: linear-gradient(to top, $pinkish-grey-three 462px, transparent 462px);
+  }
+
+  .physique-comparison__title {
+    @include font-parameters (60px);
+    margin-bottom: 65px;
+  }
+
+  .physique-comparison__text {
+    @include font-parameters (16px, 24px);
+    width: 98%;
+    margin-bottom: 55px;
+  }
+
+  .physique-comparison__slider {
+    @include flex (column, no, center);
+    margin: 50px 0 0;
+  }
+
+  .physique-comparison__image {
+    margin: 0 2px 0 16px;
+  }
+
+  .physique-comparison__toggle {
+    width: 570px;
+    margin-top: 8px;
+
+    &::before {
+      @include pseudo-element (13px, no, no, 70px, 428px, 6px);
+      border: none;
+      border-radius: 2px;
+      background-color: $pinkish-grey-six;
+    }
+
+    &::after {
+      @include pseudo-element (0, no, no, no, 8px, 8px);
+      background-color: $leaf;
+      border: 12px solid $white-two;
+      border-radius: 50%;
+      box-shadow:
+        0 0 0 1px $light-pink,
+        0 2px 5px 0 $shadow-25;
+    }
+  }
+
+  .physique-comparison__toggle--before {
+    &::after {
+      left: 70px;
+    }
+  }
+
+  .physique-comparison__toggle--after {
+    &::after {
+      left: 465px;
+    }
+  }
+
+  .physique-comparison__toggle-item {
+    @include font-parameters (20px, 20px);
+    padding: 6px 0;
+    border-bottom: 1px dotted $pinkish-grey-five;
+
+    &:hover {
+      border-bottom: 1px solid $pinkish-grey-five;
+    }
+
+    &:active {
+      &:hover {
+        border-bottom: none;
+      }
+    }
+  }
+}
+
+/*
+
+
+--------------------------- DESKTOP-----------------------------------
+
+
+*/
+
+@media (min-width: $desktop-width) {
+  .physique-comparison {
+    flex-direction: row;
+    justify-content: center;
+    width: 1220px;
+    margin: 68px -70px 0;
+    padding: 0 calc((100vw - 1220px) / 2) 50px;
+    background-color: $white-two;
+    background-image: linear-gradient(to top, $pinkish-grey-three 462px, transparent 462px);
+  }
+
+  .physique-comparison__wrapper {
+    width: 440px;
+    margin: 55px 90px 0 0;
+  }
+
+  .physique-comparison__title {
+    @include font-parameters (60px);
+    margin-bottom: 148px;
+  }
+
+  .physique-comparison__text {
+    @include font-parameters (16px, 24px);
+    margin-bottom: 65px;
+  }
+
+  .physique-comparison__slider {
+    @include flex (column, no, flex-end);
+    margin: 0;
+    width: 690px;
+  }
+
+  .physique-comparison__image {
+    margin: 0 2px 22px 40px;
+  }
+
+  .physique-comparison__toggle {
+    width: 570px;
+    margin-top: 8px;
+
+    &::before {
+      @include pseudo-element (13px, no, no, 70px, 428px, 6px);
+      border: none;
+      border-radius: 2px;
+      background-color: $pinkish-grey-six;
+    }
+
+    &::after {
+      @include pseudo-element (0, no, no, no, 8px, 8px);
+      background-color: $leaf;
+      border: 12px solid $white-two;
+      border-radius: 50%;
+      box-shadow:
+        0 0 0 1px $light-pink,
+        0 2px 5px 0 $shadow-25;
+    }
+  }
+
+  .physique-comparison__toggle--before {
+    &::after {
+      left: 70px;
+    }
+  }
+
+  .physique-comparison__toggle--after {
+    &::after {
+      left: 465px;
+    }
+  }
+
+  .physique-comparison__toggle-item {
+    @include font-parameters (20px, 20px);
+    padding: 6px 0;
+    border-bottom: 1px dotted $pinkish-grey-five;
+
+    &:hover {
+      border-bottom: 1px solid $pinkish-grey-five;
+    }
+
+    &:active {
+      &:hover {
+        border-bottom: none;
+      }
+    }
+  }
 }

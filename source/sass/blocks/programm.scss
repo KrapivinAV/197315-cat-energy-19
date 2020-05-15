@@ -378,6 +378,7 @@
 
   .programm__part--submit .programm__flex-wrapper {
     @include flex (row, no, center);
+    margin-bottom: 70px;
   }
 
   .programm__submit {
@@ -536,6 +537,10 @@
 
   .programm__part--extra .programm__image {
     margin: 0 28px 0 -49px;
+  }
+
+  .programm__part--submit .programm__flex-wrapper {
+    margin-bottom: 0;
   }
 
   .programm__submit {

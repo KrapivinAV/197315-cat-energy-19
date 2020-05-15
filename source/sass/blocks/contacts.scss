@@ -1,7 +1,12 @@
 .contacts {
-  margin: 30px -20px 0;
+  margin: 32px -20px 0;
   background-color: $white-three;
   font-size: 0;
+}
+
+.contacts--visible {
+  margin-top: 0;
+  background-color: $white-two;
 }
 
 .contacts__common {
@@ -41,7 +46,7 @@
 
 @media (min-width: $tablet-width) {
   .contacts {
-    margin: 70px -30px 0;
+    margin: 0 -30px 0;
   }
 
   .contacts__common {
@@ -84,7 +89,7 @@
   }
 
   .contacts--visible {
-    margin: 80px -70px 0;
+    margin: 0 -70px 0;
   }
 
   .contacts__common {
