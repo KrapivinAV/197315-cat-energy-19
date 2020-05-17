@@ -21,8 +21,13 @@
 }
 
 .physique-comparison__slider {
-  @include flex (column, no, center);
+  @include flex (column, space-between, center);
   margin: 34px -20px 0;
+  min-height: 316px;
+}
+
+.physique-comparison__image:first-of-type {
+  margin-bottom: auto;
 }
 
 .physique-comparison__toggle {
@@ -69,43 +74,39 @@
 
 @keyframes null {
   0% {
-    position: unset;
+    width: 320px;
+    height: 240px;
   }
 
   100% {
-    position: absolute;
-    clip: rect(0 0 0 0);
     width: 1px;
     height: 1px;
-    margin: -1px;
   }
 }
 
 @keyframes full {
   0% {
-    position: absolute;
-    clip: rect(0 0 0 0);
     width: 1px;
     height: 1px;
-    margin: -1px;
   }
 
   100% {
-    position: unset;
+    width: 320px;
+    height: 240px;
   }
 }
 
 .physique-comparison__image--invisible {
   animation-name: null;
   animation-duration: 1s;
-  animation-fill-mode: forwards;
+  animation-fill-mode: both;
 }
 
 .physique-comparison__image--visible {
   animation-name: full;
   animation-duration: 1s;
   animation-delay: 1s;
-  animation-fill-mode: forwards;
+  animation-fill-mode: both;
 }
 
 /*
