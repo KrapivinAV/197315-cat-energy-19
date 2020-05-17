@@ -68,14 +68,30 @@
 }
 
 @keyframes null {
-  to {
-    transform: scale(0);
+  0% {
+    position: unset;
+  }
+
+  100% {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
   }
 }
 
 @keyframes full {
-  to {
-    transform: scale(1);
+  0% {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+  }
+
+  100% {
+    position: unset;
   }
 }
 
