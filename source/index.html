@@ -11,7 +11,7 @@
   <body>
 
     <header class="page-header">
-      <a class="page-header__logo" href="index.html">
+      <a class="page-header__logo" href="#">
         <picture>
           <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg">
           <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
@@ -51,19 +51,19 @@
           <h3 class="categories__item-title">Похудение</h3>
           <p class="categories__item-text">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
           <a class="categories__item-link" href="catalog-slim.html">
-            Каталог Slim
-            <svg class="categories__item-image" width="25" height="12">
-              <use xlink:href="img/sprite.svg#icon-right-arrow-long"></use>
+            <span class="categories__item-link-text">Каталог Slim</span>
+            <svg class="categories__item-image" width="34" height="12">
+              <use xlink:href="img/sprite.svg#icon-right-arrow-verylong"></use>
             </svg>
-            </a>
+          </a>
         </article>
         <article class="categories__item categories__item--fat">
           <h3 class="categories__item-title">Набор Массы</h3>
           <p class="categories__item-text">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
           <a class="categories__item-link" href="catalog-pro.html">
-            Каталог Pro
-            <svg class="categories__item-image" width="25" height="12">
-              <use xlink:href="img/sprite.svg#icon-right-arrow-long"></use>
+            <span class="categories__item-link-text">Каталог Pro</span>
+            <svg class="categories__item-image" width="34" height="12">
+              <use xlink:href="img/sprite.svg#icon-right-arrow-verylong"></use>
             </svg>
           </a>
         </article>
@@ -148,7 +148,7 @@
               type="image/webp"
               srcset="img/before-mobile@1x.webp 1x,
                       img/before-mobile@2x.webp 2x">
-            <img class="physique-comparison__image" src="img/before-mobile@1x.png" srcset="img/before-mobile@2x.png 2x" alt="Физическое состояние до курса">
+            <img class="physique-comparison__image physique-comparison__image--visible" src="img/before-mobile@1x.png" srcset="img/before-mobile@2x.png 2x" alt="Физическое состояние до курса">
           </picture>
           <picture>
             <source
@@ -173,7 +173,7 @@
               type="image/webp"
               srcset="img/after-mobile@1x.webp 1x,
                       img/after-mobile@2x.webp 2x">
-            <img class="physique-comparison__image visually-hidden" src="img/after-mobile@1x.png" srcset="img/after-mobile@2x.png 2x" alt="Физическое состояние после курса">
+            <img class="physique-comparison__image physique-comparison__image--invisible" src="img/after-mobile@1x.png" srcset="img/after-mobile@2x.png 2x" alt="Физическое состояние после курса">
           </picture>
           <p class="physique-comparison__toggle physique-comparison__toggle--before">
             <button class="physique-comparison__toggle-item">Было</button>
@@ -198,7 +198,7 @@
 
     <footer class="page-footer">
       <div class="page-footer__logo-wrapper">
-        <a class="page-footer__logo" href="index.html">
+        <a class="page-footer__logo" href="#">
           <svg class="page-footer__logo-image" width="128" height="24">
             <use xlink:href="img/sprite.svg#logo-footer"></use>
           </svg>

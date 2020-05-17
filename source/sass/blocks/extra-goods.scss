@@ -45,6 +45,10 @@
 .extra-goods__item-order-popup {
   @include button;
   @include font-parameters (16px, 20px, $white-two, center, uppercase);
+
+  &:active {
+    color: $white-two-30;
+  }
 }
 
 .extra-goods__deception {
@@ -52,7 +56,7 @@
   margin-top: 39px;
   padding: 65px 55px 43px;
   background-color: $leaf;
-  background-image: url("../../img/gift-photo-mobile@1x.jpg");
+  background-image: url("../img/gift-photo-mobile@1x.jpg");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -124,7 +128,7 @@
     margin-top: 70px;
     padding: 65px 120px 72px 90px;
     background-color: $leaf;
-    background-image: url("../../img/gift-photo-tablet@1x.jpg");
+    background-image: url("../img/gift-photo-tablet@1x.jpg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -206,7 +210,7 @@
     margin: 0 0 0 80px;
     padding: 65px 40px 38px;
     background-color: $leaf;
-    background-image: url("../../img/gift-photo-desktop@1x.jpg");
+    background-image: url("../img/gift-photo-desktop@1x.jpg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;

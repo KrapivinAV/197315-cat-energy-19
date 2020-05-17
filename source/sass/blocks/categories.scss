@@ -26,14 +26,14 @@
 .categories__item--slim {
   &::after {
     @include pseudo-element (22px, no, no, 30px, 35px, 49px);
-    background-image: url("../../img/icon-cat-slim.svg");
+    background-image: url("../img/icon-cat-slim.svg");
   }
 }
 
 .categories__item--fat {
   &::after {
     @include pseudo-element (35px, no, no, 13px, 67px, 28px);
-    background-image: url("../../img/icon-cat-pro.svg");
+    background-image: url("../img/icon-cat-pro.svg");
   }
 }
 
@@ -50,13 +50,32 @@
 }
 
 .categories__item-link {
+  @include flex (row, flex-start, center);
   @include font-parameters (16px, 16px, $black-two, no, uppercase);
   margin-top: 20px;
 }
 
+.categories__item-link-text {
+  width: 97px;
+  background-color: $white-two;
+  z-index: 2;
+}
+
 .categories__item-image {
-  margin-left: 10px;
+  margin-left: -10px;
   color: $arrow-color;
+}
+
+.categories__item-link:hover .categories__item-image {
+  margin-left: -1px;
+}
+
+.categories__item-link:active {
+  opacity: 0.3;
+}
+
+.categories__item-link:active .categories__item-image {
+  margin-left: -1px;
 }
 
 /*
@@ -110,8 +129,8 @@
     margin-top: 57px;
   }
 
-  .categories__item-image {
-    margin-left: 20px;
+  .categories__item-link-text {
+    width: 130px;
   }
 }
 

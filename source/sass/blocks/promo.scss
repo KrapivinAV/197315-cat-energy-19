@@ -4,8 +4,8 @@
   margin: 0 -20px;
   padding: 27px 20px 3px;
   background-image:
-    url("../../img/index-can-mobile@1x.png"),
-    url("../../img/index-background-mobile@1x.jpg"),
+    url("../img/index-can-mobile@1x.png"),
+    url("../img/index-background-mobile@1x.jpg"),
     linear-gradient(to bottom, $leaf-three 305px, transparent 305px);
   background-position: center bottom 46px, 50% 0, 0 0;
   background-size: 280px, 320px, 100%;
@@ -26,6 +26,10 @@
 .promo__programm-link {
   @include button;
   @include font-parameters (14px, 18px, $white-two, center, uppercase);
+
+  &:active {
+    color: $white-two-30;
+  }
 }
 
 /*
@@ -43,7 +47,7 @@
     min-height: 809px;
     margin: 0;
     padding: 52px 90px 0;
-    background-image: url("../../img/index-can-tablet@1x.jpg");
+    background-image: url("../img/index-can-tablet@1x.jpg");
     background-position: bottom;
     background-size: 708px;
   }
@@ -83,8 +87,8 @@
     margin: -120px -70px 0;
     padding: 222px calc((100vw - 1220px) / 2) 0;
     background-image:
-      url("../../img/index-can-desktop@1x.png"),
-      url("../../img/index-background-desktop@1x.jpg"),
+      url("../img/index-can-desktop@1x.png"),
+      url("../img/index-background-desktop@1x.jpg"),
       linear-gradient(to left, $leaf-three 50%, transparent 50%);
     background-position: calc(50% + 116px) 72%, 100% 0, 0 0;
     background-size: 552px, 720px, 100%;

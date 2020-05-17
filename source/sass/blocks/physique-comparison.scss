@@ -64,6 +64,32 @@
   padding: 0;
   border: none;
   background-color: transparent;
+  cursor: pointer;
+}
+
+@keyframes null {
+  to {
+    transform: scale(0);
+  }
+}
+
+@keyframes full {
+  to {
+    transform: scale(1);
+  }
+}
+
+.physique-comparison__image--invisible {
+  animation-name: null;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.physique-comparison__image--visible {
+  animation-name: full;
+  animation-duration: 1s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
 }
 
 /*

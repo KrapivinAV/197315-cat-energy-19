@@ -68,6 +68,10 @@
 .catalog__item-order-popup {
   @include button;
   @include font-parameters (16px, 20px, $white-two, center, uppercase);
+
+  &:active {
+    color: $white-two-30;
+  }
 }
 
 .catalog__item--extend {
@@ -100,8 +104,12 @@
 }
 
 .catalog__item-all {
-  @include button (100%, $white-three);
+  @include button (100%, $white-three, $white-four);
   @include font-parameters (16px, 20px, $greyish-brown, center, uppercase);
+
+  &:active {
+    color: $greyish-brown-30;
+  }
 }
 
 /*
