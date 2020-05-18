@@ -137,8 +137,15 @@
 
   &:active,
   &:focus {
+    outline: none;
     border: 1px solid $greyish-brown;
     box-shadow: 0 0 0 1px $greyish-brown;
+  }
+
+  &:focus:invalid {
+    outline: none;
+    border: 1px solid $invalid;
+    box-shadow: 0 0 0 1px $invalid;
   }
 }
 
@@ -189,7 +196,9 @@
 
   &:active,
   &:focus {
-    border: 2px solid $greyish-brown;
+    outline: none;
+    border: 1px solid $greyish-brown;
+    box-shadow: 0 0 0 1px $greyish-brown;
   }
 }
 

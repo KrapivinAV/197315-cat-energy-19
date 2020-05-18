@@ -21,12 +21,15 @@
 }
 
 .physique-comparison__slider {
-  @include flex (column, space-between, center);
+  @include flex (column, flex-start, center);
   margin: 34px -20px 0;
-  min-height: 316px;
 }
 
 .physique-comparison__image:first-of-type {
+  margin-top: auto;
+}
+
+.physique-comparison__image:last-of-type {
   margin-bottom: auto;
 }
 
@@ -34,7 +37,7 @@
   @include flex (row, space-between);
   position: relative;
   width: 200px;
-  margin-top: 27px;
+  margin-top: 32px;
 
   &::before {
     @include pseudo-element (2px, no, no, 58px, 84px, 14px);
@@ -72,41 +75,34 @@
   cursor: pointer;
 }
 
-@keyframes null {
-  0% {
-    width: 320px;
-    height: 240px;
-  }
-
-  100% {
-    width: 1px;
-    height: 1px;
-  }
-}
-
-@keyframes full {
-  0% {
-    width: 1px;
-    height: 1px;
-  }
-
-  100% {
-    width: 320px;
-    height: 240px;
-  }
+.physique-comparison__slider-wrapper {
+  overflow: hidden;
+  width: 320px;
+  height: 240px;
+  font-size: 0;
 }
 
 .physique-comparison__image--invisible {
-  animation-name: null;
-  animation-duration: 1s;
-  animation-fill-mode: both;
+  transform: scale(0);
+  transition-duration: 0.3s;
 }
 
 .physique-comparison__image--visible {
-  animation-name: full;
-  animation-duration: 1s;
-  animation-delay: 1s;
-  animation-fill-mode: both;
+  transform: scale(1);
+  transition-duration: 0.3s;
+  transition-delay: 0.31s;
+}
+
+.physique-comparison__slider-slides--up {
+  transform: translateY(-240px);
+  transition-duration: 0.01s;
+  transition-delay: 0.3s;
+}
+
+.physique-comparison__slider-slides--down {
+  transform: translateY(0);
+  transition-duration: 0.01s;
+  transition-delay: 0.3s;
 }
 
 /*
@@ -147,7 +143,7 @@
 
   .physique-comparison__toggle {
     width: 570px;
-    margin-top: 8px;
+    margin-top: 12px;
 
     &::before {
       @include pseudo-element (13px, no, no, 70px, 428px, 6px);
@@ -193,6 +189,15 @@
         border-bottom: none;
       }
     }
+  }
+
+  .physique-comparison__slider-wrapper {
+    width: 690px;
+    height: 517px;
+  }
+
+  .physique-comparison__slider-slides--up {
+    transform: translateY(-517px);
   }
 }
 
@@ -242,7 +247,7 @@
 
   .physique-comparison__toggle {
     width: 570px;
-    margin-top: 8px;
+    margin-top: 34px;
 
     &::before {
       @include pseudo-element (13px, no, no, 70px, 428px, 6px);

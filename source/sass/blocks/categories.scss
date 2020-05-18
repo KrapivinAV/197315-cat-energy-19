@@ -57,13 +57,15 @@
 
 .categories__item-link-text {
   width: 97px;
-  background-color: $white-two;
+  background-color: $white-three;
   z-index: 2;
 }
 
 .categories__item-image {
   margin-left: -10px;
   color: $arrow-color;
+  transition-property: margin;
+  transition-duration: 1s;
 }
 
 .categories__item-link:hover .categories__item-image {

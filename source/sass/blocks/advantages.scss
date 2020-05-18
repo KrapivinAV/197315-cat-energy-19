@@ -50,6 +50,25 @@
   margin-left: 20px;
 }
 
+@media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+  .advantages__item--substance .advantages__item-icon {
+    background-image: url("../img/advantage-leaf@2x.png");
+  }
+
+  .advantages__item--speed .advantages__item-icon {
+    background-image: url("../img/advantage-powder@2x.png");
+  }
+
+  .advantages__item--replacement .advantages__item-icon {
+    background-image: url("../img/advantage-dining@2x.png");
+  }
+
+  .advantages__item--changes .advantages__item-icon {
+    background-image: url("../img/advantage-clock@2x.png");
+  }
+}
+
+
 /*
 
 

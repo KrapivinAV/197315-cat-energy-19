@@ -38,6 +38,10 @@
 
 .main-menu__list {
   @include flex (column);
+  position: absolute;
+  width: 100%;
+  background-color: $white-two;
+  z-index: 5;
 }
 
 .main-menu__item {
@@ -45,6 +49,10 @@
   min-height: 65px;
   border-top: 1px solid $light-pink;
   box-sizing: border-box;
+
+  &:last-of-type {
+    border-bottom: 1px solid $light-pink;
+  }
 }
 
 .main-menu__link {
@@ -71,6 +79,7 @@
   }
 
   .main-menu--nojs .main-menu__list {
+    position: static;
     display: flex;
   }
 }
@@ -94,7 +103,9 @@
 
   .main-menu__list {
     @include flex (row, flex-end, flex-start, wrap);
+    position: static;
     padding: 17px 0 0;
+    background-color: transparent;
   }
 
   .main-menu__item {
@@ -103,7 +114,15 @@
     padding: 0 0 7px 0;
     border: none;
 
+    &:last-of-type {
+      border: none;
+    }
+
     &--active {
+      border-bottom: 2px solid $leaf;
+    }
+
+    &--active:last-of-type {
       border-bottom: 2px solid $leaf;
     }
   }
@@ -143,10 +162,12 @@
 
   .main-menu__list--recolor .main-menu__link[href] {
     &:hover {
+      color: $white-two;
       opacity: 0.6;
     }
 
     &:active {
+      color: $white-two;
       opacity: 0.3;
     }
   }
