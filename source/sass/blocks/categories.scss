@@ -15,25 +15,25 @@
     border: none;
     border-radius: 50%;
   }
-}
 
-.categories__item--slim {
   &::after {
-    @include pseudo-element (22px, no, no, 30px, 35px, 49px);
-    background-image: url("../../img/icon-cat-slim.svg");
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
   }
 }
 
+.categories__item--slim {
+  &::after {
+    @include pseudo-element (22px, no, no, 30px, 35px, 49px);
+    background-image: url("../img/icon-cat-slim.svg");
+  }
+}
+
 .categories__item--fat {
   &::after {
     @include pseudo-element (35px, no, no, 13px, 67px, 28px);
-    background-image: url("../../img/icon-cat-pro.svg");
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
+    background-image: url("../img/icon-cat-pro.svg");
   }
 }
 
@@ -44,19 +44,40 @@
 
 .categories__item-text {
   @include font-parameters (14px, 18px, $greyish-brown);
-  font-family: "Arial", "Helvetica", sans-serif;
+  font-family: "Arial", sans-serif;
   padding-bottom: 20px;
   border-bottom: 1px solid $pinkish-grey-four;
 }
 
 .categories__item-link {
+  @include flex (row, flex-start, center);
   @include font-parameters (16px, 16px, $black-two, no, uppercase);
   margin-top: 20px;
 }
 
+.categories__item-link-text {
+  width: 97px;
+  background-color: $white-three;
+  z-index: 2;
+}
+
 .categories__item-image {
-  margin-left: 10px;
+  margin-left: -10px;
   color: $arrow-color;
+  transition-property: margin;
+  transition-duration: 1s;
+}
+
+.categories__item-link:hover .categories__item-image {
+  margin-left: -1px;
+}
+
+.categories__item-link:active {
+  opacity: 0.3;
+}
+
+.categories__item-link:active .categories__item-image {
+  margin-left: -1px;
 }
 
 /*
@@ -110,8 +131,8 @@
     margin-top: 57px;
   }
 
-  .categories__item-image {
-    margin-left: 20px;
+  .categories__item-link-text {
+    width: 130px;
   }
 }
 
@@ -126,15 +147,21 @@
 @media (min-width: $desktop-width) {
   .categories {
     @include flex (row, space-between, no, wrap);
-    margin: 80px -40px;
+    margin: 80px 0;
+    width: 1220px;
+    align-self: center;
   }
 
   .categories__item {
     flex-grow: 1;
     width: 570px;
     box-sizing: border-box;
-    margin: 0 40px 0;
+    margin: 0;
     padding: 75px 55px 62px 52px;
+
+    &:nth-of-type(2n+1) {
+      margin: 0 80px 0 0;
+    }
 
     &::before {
       @include pseudo-element (47px, auto, no, 52px, 100px, 100px);

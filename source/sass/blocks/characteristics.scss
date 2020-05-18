@@ -1,3 +1,136 @@
-.physique-comparison {
-  display: none;
+.characteristics {
+  @include flex (row, space-between, flex-start, wrap);
+}
+
+.characteristics__item {
+  @include flex (column, space-between, center);
+  width: 45%;
+  margin-bottom: 35px;
+  padding: 13px;
+  box-sizing: border-box;
+  border: 1px solid $light-pink;
+}
+
+.characteristics__item-parameter-value {
+  @include font-parameters (24px, 24px, $black-two, center, uppercase);
+  margin-bottom: 10px;
+}
+
+.characteristics__item-parameter {
+  @include font-parameters (12px, 12px, $greyish-brown, center);
+  font-family: "Arial", sans-serif;
+  width: 87px;
+  margin-bottom: -30px;
+  padding: 0 15px;
+  background-color: $white-three;
+  box-sizing: border-box;
+}
+
+.characteristics__item--expenses {
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.characteristics__item--expenses * {
+  @include font-parameters (14px, 20px, $black-two, center, uppercase);
+  font-family: "Oswald", "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  width: auto;
+}
+
+/*
+
+
+--------------------------- TABLET-----------------------------------
+
+
+*/
+
+@media (min-width: $tablet-width) {
+  .characteristics__item {
+    @include flex (column, space-between, center);
+    width: 23%;
+    min-height: 72px;
+    margin-right: 42px;
+    padding: 13px 5px 5px;
+  }
+
+  .characteristics__item-parameter-value {
+    @include font-parameters (30px, 37px);
+    margin-bottom: 10px;
+  }
+
+  .characteristics__item-parameter {
+    @include font-parameters (14px, 14px);
+    width: auto;
+    margin-bottom: -10px;
+    padding: 0 8px;
+    background-color: $white-two;
+  }
+
+  .characteristics__item--expenses {
+    @include flex (column, center, flex-end);
+    width: auto;
+    margin: 0 0 0 auto;
+    padding: 0;
+    border: none;
+  }
+
+  .characteristics__item--expenses * {
+    @include font-parameters (20px, 20px);
+    margin: 0;
+    padding: 0;
+  }
+
+  .characteristics__item--expenses .characteristics__item-parameter {
+    margin: 0 0 10px;
+  }
+}
+
+/*
+
+
+--------------------------- DESKTOP-----------------------------------
+
+
+*/
+
+@media (min-width: $desktop-width) {
+  .characteristics {
+    @include flex (row, flex-start, flex-start, wrap);
+  }
+
+  .characteristics__item {
+    width: 162px;
+  }
+
+  .characteristics__item-parameter-value {
+    @include font-parameters (30px, 37px);
+    margin-bottom: 10px;
+  }
+
+  .characteristics__item-parameter {
+    background-color: $pinkish-grey-three;
+  }
+
+  .characteristics__item--expenses {
+    @include flex (row, flex-start, center);
+    width: 100%;
+    margin: 0;
+  }
+
+  .characteristics__item--expenses * {
+    @include font-parameters (20px, 20px);
+    margin: 0;
+    padding: 0;
+  }
+
+  .characteristics__item--expenses .characteristics__item-parameter {
+    margin: 0 65px 0 0;
+  }
 }

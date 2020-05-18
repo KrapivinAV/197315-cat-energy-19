@@ -1,16 +1,20 @@
-let linkModalGoods = document.querySelector('.catalog__item-order-popup');
-let linkModalExtraGoods = document.querySelector('.extra-goods__item-order-popup');
+let linkModalGoods = document.querySelectorAll('.catalog__item-order-popup');
+let linkModalExtraGoods = document.querySelectorAll('.extra-goods__item-order-popup');
 let popupModal = document.querySelector('.popup');
 let closeModal = popupModal.querySelector('.popup__close');
 
-linkModalGoods.addEventListener('click', function (evt) {
-  evt.preventDefault();
-  popupModal.classList.add('popup--active');
+linkModalGoods.forEach(function(btn) {
+  btn.addEventListener('click', function (evt) {
+    evt.preventDefault();
+    popupModal.classList.add('popup--active');
+  })
 });
 
-linkModalExtraGoods.addEventListener('click', function (evt) {
-  evt.preventDefault();
-  popupModal.classList.add('popup--active');
+linkModalExtraGoods.forEach(function(btn) {
+  btn.addEventListener('click', function (evt) {
+    evt.preventDefault();
+    popupModal.classList.add('popup--active');
+  })
 });
 
 closeModal.addEventListener('click', function (evt) {
