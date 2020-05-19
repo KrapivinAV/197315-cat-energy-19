@@ -63,6 +63,10 @@
   }
 }
 
+.page-footer__developer-logo {
+  margin-right: -8px;
+}
+
 /*
 
 
@@ -115,6 +119,7 @@
 
   .page-footer__developer {
     min-height: 0;
+    margin-right: -7px;
   }
 
   .page-footer__developer a {
@@ -133,7 +138,7 @@
 @media (min-width: $desktop-width) {
   .page-footer {
     justify-content: center;
-    margin: 0 -70px;
+    margin: 0;
     padding: 5px 0 0;
   }
 

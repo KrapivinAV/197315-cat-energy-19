@@ -95,13 +95,13 @@
   .promo {
     min-height: 474px;
     width: 1220px;
-    margin: -120px -70px 0;
+    margin: -120px 0 0;
     padding: 222px calc((100vw - 1220px) / 2) 0;
     background-image:
       url("../img/index-can-desktop@1x.png"),
       url("../img/index-background-desktop@1x.jpg"),
       linear-gradient(to left, $leaf-three 50%, transparent 50%);
-    background-position: calc(50% + 116px) 72%, 100% 0, 0 0;
+    background-position: calc(50% + 116px) 72%, calc(100% + 70px) 0, 0 0;
     background-size: 552px, 720px, 100%;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
