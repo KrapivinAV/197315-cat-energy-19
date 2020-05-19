@@ -4,12 +4,10 @@
 
 @media (min-width: $desktop-width) {
   .page-main {
-    margin: 0 -70px;
     overflow: hidden;
   }
 
   .page-main--visible {
-    margin: 0;
     overflow: visible;
   }
 }

@@ -44,6 +44,6 @@ img {
 @media (min-width: $desktop-width) {
   body {
     @include flex (column);
-    padding: 0 70px;
+    padding: 0;
   }
 }

@@ -1,7 +1,7 @@
-let sliderImages = document.querySelectorAll('.physique-comparison__image');
-let sliderUnit = document.querySelector('.physique-comparison__toggle');
-let sliderToggles = document.querySelectorAll('.physique-comparison__toggle-item');
-let sliderModule = document.querySelector('.physique-comparison__slider-slides');
+var sliderImages = document.querySelectorAll('.physique-comparison__image');
+var sliderUnit = document.querySelector('.physique-comparison__toggle');
+var sliderToggles = document.querySelectorAll('.physique-comparison__toggle-item');
+var sliderModule = document.querySelector('.physique-comparison__slider-slides');
 
 sliderToggles[0].addEventListener('click', function () {
   sliderUnit.classList.remove('physique-comparison__toggle--after');

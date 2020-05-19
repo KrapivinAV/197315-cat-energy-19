@@ -1,7 +1,7 @@
-let linkModalGoods = document.querySelectorAll('.catalog__item-order-popup');
-let linkModalExtraGoods = document.querySelectorAll('.extra-goods__item-order-popup');
-let popupModal = document.querySelector('.popup');
-let closeModal = popupModal.querySelector('.popup__close');
+var linkModalGoods = document.querySelectorAll('.catalog__item-order-popup');
+var linkModalExtraGoods = document.querySelectorAll('.extra-goods__item-order-popup');
+var popupModal = document.querySelector('.popup');
+var closeModal = popupModal.querySelector('.popup__close');
 
 linkModalGoods.forEach(function(btn) {
   btn.addEventListener('click', function (evt) {
